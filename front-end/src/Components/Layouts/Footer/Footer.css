@@ -1,0 +1,233 @@
+/* Footer.css */
+
+/* Fond du footer */
+.footer {
+    background-color: #ffffff;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Contenu du footer centré */
+  .footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  /* Section du footer */
+  .footer-section {
+    flex: 1;
+    padding: 10px;
+    min-width: 200px;
+  }
+  
+  /* Liste des liens dans chaque section */
+  .footer-section h4 {
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul li a {
+    color: #007aff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #0056b3;
+  }
+  
+  /* Liens sociaux */
+  .social-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .social-links a {
+    color: #000000;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    color: #007aff;
+    transform: translateY(-2px);
+  }
+  
+  /* Section des développeurs */
+  .developers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .developer {
+    text-align: center;
+  }
+  
+  .developer img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+  .developer p {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  /* Média query pour les petits écrans */
+  @media (max-width: 768px) {
+    .footer .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-section {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .social-links {
+      justify-content: center;
+    }
+  
+    .developers {
+      justify-content: center;
+    }
+  }
+  /* تأثيرات على صورة المطور عند التمرير */
+.developer img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .developer img:hover {
+    transform: scale(1.1); /* تكبير الصورة */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* إضافة ظل للصورة */
+  }
+  
+  /* يمكن إضافة تأثير النص أيضاً */
+  .developer p {
+    margin-top: 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .developer:hover p {
+    color: #007aff; /* تغيير لون النص عند التمرير على الصورة */
+  }
+  /* قسم Follow Us */
+.footer-section .social-links {
+    display: flex;
+    justify-content: center; /* لجعل الأيقونات في الوسط */
+    gap: 22px; /* المسافة بين الأيقونات */
+    margin-top: 15px; /* إضافة مسافة أعلى الأيقونات */
+  }
+  
+  .social-links a {
+    color: #000000;
+    font-size: 1.5rem; /* تكبير حجم الأيقونات قليلاً */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    color: #007aff; /* تغيير اللون عند التمرير */
+    transform: translateY(-5px); /* تأثير رفع الأيقونة عند التمرير */
+  }
+  /* Section des développeurs */
+.developers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* قسم المطور */
+.developer {
+  text-align: center;
+  flex: 0 1 200px; /* تعيين الحجم بشكل مرن */
+  margin-bottom: 20px; /* إضافة مسافة أسفل كل مطور */
+}
+
+/* صورة المطور */
+.developer img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* تأثير عند التمرير على صورة المطور */
+.developer img:hover {
+  transform: scale(1.1);  /* تكبير الصورة عند التمرير */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  /* إضافة ظل */
+}
+/* قسم Entreprise وContact */
+.footer-section {
+  flex: 1;
+  padding: 10px;
+  min-width: 200px;
+  text-align: center; /* توسيط النص داخل الأقسام */
+  margin-bottom: 20px; /* إضافة مسافة بين الأقسام */
+}
+
+/* العناوين داخل الأقسام */
+.footer-section h4 {
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;  /* توسيط العناوين */
+}
+
+/* قائمة الروابط داخل كل قسم */
+.footer-section ul {
+  list-style: none;
+  padding-left: 0;
+  text-align: center; /* توسيط النص في الروابط */
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #007aff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #0056b3;
+}

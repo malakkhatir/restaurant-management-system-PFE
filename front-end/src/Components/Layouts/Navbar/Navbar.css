@@ -1,0 +1,114 @@
+/* Navbar.css */
+
+/* Navbar fixe en haut, sans aucun décalage */
+.navbar {
+  width: 100%;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.8rem 0; /* hauteur de la navbar */
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.navbar-logo {
+  font-size: 30px;
+  color: #333333;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.1);
+  color: #007aff;
+}
+
+/* Liens centraux */
+.navbar-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar-nav .nav-link {
+  color: #000;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007aff;
+  text-decoration: underline;
+  transform: translateY(-2px);
+}
+
+/* Bouton toggler mobile */
+.navbar-toggler {
+  border: none;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background-color: #f1f1f1;
+  transition: background-color 0.3s;
+}
+
+.navbar-toggler:hover {
+  background-color: #e0e0e0;
+}
+
+.navbar-toggler-icon,
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 2px;
+  position: relative;
+}
+
+.navbar-toggler-icon::before { top: -8px; }
+.navbar-toggler-icon::after  { top:  8px; }
+
+/* Suppression des marges et padding pour éviter tout espace inutile */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Ajustement de l'espace entre la navbar et le contenu */
+body {
+  padding-top: 0;
+}
+/* إزالة التسطير (underline) من الروابط */
+.navbar-nav .nav-link {
+  text-decoration: none; /* إلغاء التسطير */
+}
+
+.navbar-nav .nav-link:hover {
+  text-decoration: none; /* إلغاء التسطير عند المرور بالفأرة */
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 15px;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* عند الضغط على الرابط يتم تلوينه باللون الأزرق */
+.navbar-nav .nav-item .nav-link.active {
+  color: #007aff; /* اللون الأزرق عند التنشيط */
+}

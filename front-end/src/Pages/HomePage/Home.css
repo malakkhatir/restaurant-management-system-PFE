@@ -1,0 +1,341 @@
+/* الحاوية الرئيسية */
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* ملء الشاشة بالكامل */
+    margin-top: 0; /* إزالة أي مسافة من الأعلى */
+    padding: 0; /* إزالة أي حواف */
+    background-color: #f0f0f0;
+    position: relative;
+    overflow: hidden; /* التأكد من عدم ظهور العناصر خارج الصورة */
+}
+
+/* الصورة */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* تملأ الصورة الحاوية بالكامل */
+    filter: brightness(50%); /* جعل الصورة أغمق قليلاً لظهور الزر بشكل أوضح */
+    transition: transform 0.5s ease;
+}
+
+/* تأثير التمرير على الصورة */
+.image-container img:hover {
+    transform: scale(1.05); /* تكبير الصورة عند التمرير عليها */
+}
+
+/* زر الحجز */
+.book-now-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* وضع الزر في المنتصف */
+    padding: 20px 40px;
+    font-size: 20px;
+    background-color: #007aff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* ظل للزر */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 2; /* التأكد من أن الزر في أعلى الطبقات */
+}
+
+/* تأثير التمرير على الزر */
+.book-now-btn:hover {
+    background-color: #005bb5; /* تغيير اللون عند التمرير */
+    transform: translate(-50%, -50%) scale(1.1); /* تكبير الزر */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* تأثير الظل عند التمرير */
+}
+
+/* النص الذي يظهر فوق الزر */
+.image-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    z-index: 1; /* جعل النص تحت الزر */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* إضافة ظل للنص */
+}
+
+.overlay-text {
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: normal;
+}
+/* جعل الصورة تغطي الشاشة بالكامل */
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* تغطي الشاشة بالكامل */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/* إضافة تراكب داكن فوق الصورة */
+.hero-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* خلفية شفافة سوداء */
+}
+
+/* تحسين تنسيق النص */
+.image-overlay {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+}
+
+.image-overlay h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.overlay-text {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+/* تحسين شكل الزر */
+.reservation-btn {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(90deg, #ff8c00, #ff4500);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 15px rgba(255, 140, 0, 0.5);
+}
+
+.reservation-btn:hover {
+    background: linear-gradient(90deg, #ff4500, #ff8c00);
+    transform: translateX(-50%) scale(1.1);
+    box-shadow: 0px 8px 20px rgba(255, 69, 0, 0.7);
+}
+
+/* جعل الحاوية الرئيسية تمتد على كامل الشاشة */
+.home-container {
+    width: 100%;
+    height: 100vh; /* تغطية الشاشة بالكامل */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ضبط الصورة لتملأ الشاشة بالكامل */
+.image-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* تضمن تغطية الصورة للمساحة بالكامل */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* إضافة تأثير تراكب داكن على الصورة */
+.image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* شفافية سوداء خفيفة */
+}
+
+/* ضبط النصوص في منتصف الصورة */
+.image-overlay {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.image-overlay h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.overlay-text {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* تحسين تصميم الزر */
+.book-now-btn {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(90deg, #ff7b00, #ff4500);
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 15px rgba(255, 140, 0, 0.5);
+}
+
+.book-now-btn:hover {
+    background: linear-gradient(90deg, #ff4500, #ff7b00);
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0px 8px 20px rgba(255, 69, 0, 0.7);
+}
+/* استعلامات الوسائط لتصغير النص والأزرار في الهواتف */
+@media (max-width: 768px) {
+
+    /* تقليص حجم النص في العنوان */
+    .image-overlay h2 {
+      font-size: 1.8rem; /* تقليص حجم الخط */
+      letter-spacing: 1px; /* تقليص المسافة بين الحروف */
+    }
+  
+    /* تقليص حجم النص في الوصف */
+    .overlay-text {
+      font-size: 1.1rem; /* تقليص حجم الخط */
+      margin-bottom: 10px; /* تقليص المسافة */
+    }
+  
+    /* تقليص حجم الزر */
+ 
+  
+    /* إضافة جماليات النص في الهواتف */
+    .image-overlay h2,
+    .overlay-text {
+      font-family: 'Arial', sans-serif; /* تغيير نوع الخط لزيادة الوضوح */
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* إضافة ظل للنص */
+    }
+  
+    /* تأثير التمرير على الزر في الهواتف */
+
+  }
+  /* استعلامات الوسائط لتصغير النص والأزرار في الهواتف */
+  @media (max-width: 768px) {
+    .book-now-btn {
+        padding: 10px ; /* تصغير حجم الزر */
+        font-size: 1.3rem;
+        border-radius: 20px;
+        text-align:center;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDelay {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px) translateX(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) translateX(-50%);
+    }
+}
+
+@keyframes progress {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0%;
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-fade-in-delay {
+    animation: fadeInDelay 0.8s ease-out 0.3s forwards;
+    opacity: 0;
+}
+
+.animate-scale-in {
+    animation: scaleIn 0.5s ease-out 0.5s forwards;
+    opacity: 0;
+}
+
+.animate-fade-in-down {
+    animation: fadeInDown 0.5s ease-out forwards;
+}
+
+.animate-progress {
+    animation: progress 2s linear forwards;
+}

@@ -1,0 +1,161 @@
+/* تنسيق الحاوية الرئيسية */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.contact-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contact-intro {
+  font-size: 18px;
+  text-align: center;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* تنسيق الكارد */
+.contact-card {
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 80%;
+  max-width: 1000px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-image {
+  flex: 1;
+}
+
+.hotel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-info {
+  flex: 1.5;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-left: 1px solid #ddd;
+}
+
+.contact-info h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.contact-info a {
+  color: #4a90e2;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* زر حجز الغرفة */
+.book-now-btn {
+  padding: 12px 20px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.book-now-btn:hover {
+  background-color: #357ab7;
+}
+/* التصاميم المتجاوبة (responsive) */
+
+/* عند الشاشات الصغيرة (الهاتف) */
+@media (max-width: 768px) {
+  .contact-card {
+    flex-direction: column-reverse; /* تغيير ترتيب المحتوى: الصورة في الأعلى ثم المعلومات */
+  }
+
+  .contact-image {
+    order: 1; /* جعل الصورة أولاً */
+  }
+
+  .contact-info {
+    order: 2; /* جعل المعلومات بعد الصورة */
+  }
+
+  .contact-title {
+    font-size: 28px; /* تصغير الحجم */
+  }
+
+  .contact-intro {
+    font-size: 16px; /* تصغير الحجم */
+  }
+
+  .contact-card {
+    flex-direction: column; /* ترتيب المحتوى عموديًا */
+    width: 100%; /* ملائم أكثر لشاشات الهواتف */
+  }
+
+  .contact-info {
+    padding: 20px; /* تقليل الحشو */
+  }
+
+  .contact-info h2 {
+    font-size: 24px; /* تصغير العنوان */
+  }
+
+  .contact-info li {
+    font-size: 16px; /* تصغير النص */
+  }
+
+  .booking-info {
+    font-size: 16px; /* تصغير الخط */
+  }
+
+  .book-now-btn {
+    width: 180px; /* تقليل عرض الزر */
+    font-size: 16px; /* تصغير الخط */
+  }
+}
+
+/* عند الشاشات الأكبر من 768px (الحاسوب) */
+@media (min-width: 769px) {
+  .contact-card {
+    width: 85%; /* تكبير الكارد قليلاً على الحاسوب */
+  }
+
+  .contact-info h2 {
+    font-size: 28px;
+  }
+
+  .contact-info li {
+    font-size: 18px;
+  }
+
+  .book-now-btn {
+    font-size: 18px;
+    width: 220px;
+  }
+}
